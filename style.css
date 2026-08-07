@@ -1,0 +1,200 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "jost";
+}
+h2{
+    font-size: 64px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 2px 2px 5px #000;
+}
+p{
+    font-size: 20px;
+    color: #fff;
+}
+section{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+.section-1{
+    background-color: #271539;
+    background-image: url(image25.jfif);
+    background-image:linear-gradient(145deg,#271539,#501f5a,#915ba4,#c2649b,#e783b5);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% auto; 
+}
+.section-2{
+    background-color: #501f5a;
+    background-image: linear-gradient(145deg, #02140E, #05281C, #0A3D2C, #10B981, #34D399);
+    background-image: url(image34.jpeg);
+    
+}
+.section-3{
+    background-color: #915ba4;
+    background-image: linear-gradient(145deg,#3D120A, #FF6B35, #FF2E63, #FF8FA3, #FFD6C9);
+    background-image: url(image26.jfif);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% auto; 
+}
+.section-4{
+    background-color: #c2649b;
+    background-image:linear-gradient(145deg,#0DA797, #8B5CF6, #22D3EE, #EBA2F5, #6EB7CC);
+    background-image:   url(image35.jpeg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+} 
+ */
+/* =========================================
+   Reset Default Browser Styles
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Jost",sans-serif;
+}
+
+/* =========================================
+   Full Screen Section
+========================================= */
+
+section{
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    position:relative;
+    overflow:hidden;
+
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment:fixed;
+}
+
+/* =========================================
+   Dark Overlay
+========================================= */
+
+section::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.45);
+}
+
+/* =========================================
+   Keep Text Above Overlay
+========================================= */
+
+section div{
+    position:relative;
+    z-index:2;
+}
+
+/* =========================================
+   Heading
+========================================= */
+
+h2{
+    font-size:64px;
+    font-weight:700;
+    color:#fff;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    text-shadow:3px 3px 10px rgba(0,0,0,0.8);
+    margin-bottom:15px;
+}
+
+/* =========================================
+   Paragraph
+========================================= */
+
+p{
+    color:white;
+    font-size:22px;
+    letter-spacing:1px;
+    text-shadow:2px 2px 8px rgba(0,0,0,0.8);
+}
+
+/* =========================================
+   Background Images
+========================================= */
+
+.section-1{
+    background-image:url("mountain.png");
+}
+
+.section-2{
+    background-image:url("forest.png");
+}
+
+.section-3{
+    background-image:url("ocean.png");
+}
+
+.section-4{
+    background-image:url("city.png");
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:15px 36px;
+
+    color:#fff;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:600;
+
+    background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.35);
+    backdrop-filter:blur(10px);
+
+    border-radius:50px;
+
+    transition:.4s ease;
+}
+
+.btn:hover{
+    background:#fff;
+    color:#111;
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 10px 30px rgba(255,255,255,.35);
+}
+/* =========================================
+   Mobile Responsive
+========================================= */
+
+@media(max-width:768px){
+
+    h2{
+        font-size:42px;
+    }
+
+    p{
+        font-size:18px;
+    }
+
+    section{
+        background-attachment:scroll;
+    }
+
+}
